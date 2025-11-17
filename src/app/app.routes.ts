@@ -19,5 +19,6 @@ export const routes: Routes = [
   { path: 'contents/:id', component: ContentDetailsComponent },
 
   { path: 'reviews', component: ListReviewsComponent },
-  { path: 'reviews/:id', component: ReviewDetailsComponent }
+  { path: 'reviews/:id', component: ReviewDetailsComponent },
+
 ];

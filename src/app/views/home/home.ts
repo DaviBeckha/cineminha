@@ -4,6 +4,8 @@ import { Categories } from '../../services/categories';
 import { CommonModule } from '@angular/common';
 import { CardCategoryComponent } from '../../components/card-category/card-category';
 import { CardContentComponent } from '../../components/card-content/card-content';
+import { Router } from '@angular/router';
+
 
 @Component({
   templateUrl: './home.html',
@@ -14,10 +16,11 @@ export class HomePageComponent implements OnInit {
   featured: any;
   categories: any[] = [];
   trending: any[] = [];
-
+  
   constructor(
     private contentsService: Contents,
-    private categoriesService: Categories
+    private categoriesService: Categories,
+    private router: Router
   ) {}
 
   ngOnInit(): void {
@@ -28,4 +31,8 @@ export class HomePageComponent implements OnInit {
 
     this.categoriesService.getAll().subscribe(c => this.categories = c);
   }
+
+  goToReviews() {
+  this.router.navigate(['/reviews']);
+}
 }

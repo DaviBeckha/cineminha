@@ -6,6 +6,10 @@
   </div>
 </div>
 
+<button class="btn btn-primary" (click)="goToReviews()">
+    Ver todos os reviews
+  </button>
+  
 <h2>Categorias</h2>
 <div class="grid">
   <app-card-category *ngFor="let c of categories" [category]="c"></app-card-category>
@@ -15,3 +19,4 @@
 <div class="row">
   <app-card-content *ngFor="let c of trending" [content]="c"></app-card-content>
 </div>
+
