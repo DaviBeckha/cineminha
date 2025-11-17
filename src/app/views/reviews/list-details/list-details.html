@@ -1,0 +1,15 @@
+<div class="container mt-4" *ngIf="review">
+  <h2>{{ review.authorName }}</h2>
+
+  <img [src]="review.authorAvatar">
+  <p><strong>Título:</strong> {{ review.title }}</p>
+  <p>{{ review.comment }}</p>
+  <p><strong>Id Filme:</strong> {{ review.contentId }}/5</p>
+  <p><strong>Rating:</strong> {{ review.rating }}/5</p>
+  
+
+  
+  
+
+  <a routerLink="/" class="btn btn-secondary mt-3">Voltar</a>
+</div>

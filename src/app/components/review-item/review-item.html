@@ -1,0 +1,10 @@
+<div class="d-flex bg-dark text-white p-3 rounded mb-3">
+  <img [src]="review.authorAvatar" class="rounded-circle me-3"
+       width="60" height="60" alt="avatar">
+
+  <div>
+    <h5 class="mb-1">{{ review.authorName }} - ⭐{{ review.rating }}</h5>
+    <h6 class="text-muted">{{ review.title }}</h6>
+    <p>{{ review.comment }}</p>
+  </div>
+</div>

@@ -1,0 +1,13 @@
+<div class="container mt-4">
+  <h2>Reviews</h2>
+
+  <div class="list-group">
+    <a
+      *ngFor="let r of reviews"
+      [routerLink]="['/reviews', r.id]"
+      class="list-group-item list-group-item-action"
+    >
+      <strong>{{ r.authorName }}</strong> — {{ r.rating }}/5
+    </a>
+  </div>
+</div>

@@ -1,0 +1,20 @@
+<div class="banner" *ngIf="content">
+  <img [src]="content.banner">
+  <div class="text">
+    <h1>{{ content.title }}</h1>
+    <p><b>Sinopse: </b>{{ content.synopsis }}</p>
+    <p><b>Diretor:</b> {{ content.director }}</p>
+    <p><b>Lançamento:</b> {{ content.releaseYear }}</p>
+    <p><b>Elenco:</b> {{ content.cast.join(', ') }}</p>
+    <p><b>IMDb:</b> {{ content.imdbRating }}</p>
+    <p><b>IMDb:</b> {{ content.imdbRating }}</p>
+  </div>
+</div>
+
+<h2>Avaliações</h2>
+<div>
+  <app-review-item *ngFor="let r of reviews" [review]="r"></app-review-item>
+</div>
+
+<h3>Adicionar review</h3>
+<app-review-form (submitReview)="addReview($event)"></app-review-form>

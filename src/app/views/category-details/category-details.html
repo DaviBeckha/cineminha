@@ -1,0 +1,10 @@
+<div class="header" *ngIf="category">
+  <img [src]="category.image">
+  <h1>{{ category.name }}</h1>
+  <p>{{ category.description }}</p>
+</div>
+
+<h2>Conteúdos</h2>
+<div class="row">
+  <app-card-content *ngFor="let c of contents" [content]="c"></app-card-content>
+</div>

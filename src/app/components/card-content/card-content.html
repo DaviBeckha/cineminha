@@ -1,0 +1,14 @@
+<a [routerLink]="['/contents', content.id]"
+   class="card bg-dark text-white border-0 h-100">
+
+  <img [src]="content.thumbnail" class="card-img-top" alt="{{content.title}}">
+
+  <div class="card-body">
+    <h5 class="card-title mb-1">{{ content.title }}</h5>
+    <small class="text-muted">{{ content.releaseYear }}</small>
+    <div>
+      ⭐ {{ content.imdbRating }}
+    </div>
+  </div>
+
+</a>

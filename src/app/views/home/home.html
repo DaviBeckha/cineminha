@@ -1,0 +1,17 @@
+<div class="banner" *ngIf="featured">
+  <img [src]="featured.banner">
+  <div class="text">
+    <h1>{{ featured.title }}</h1>
+    <p>{{ featured.description }}</p>
+  </div>
+</div>
+
+<h2>Categorias</h2>
+<div class="grid">
+  <app-card-category *ngFor="let c of categories" [category]="c"></app-card-category>
+</div>
+
+<h2>Em alta</h2>
+<div class="row">
+  <app-card-content *ngFor="let c of trending" [content]="c"></app-card-content>
+</div>
